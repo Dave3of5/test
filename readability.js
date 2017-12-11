@@ -462,9 +462,8 @@ var readability = {
     let article = articleContent.textContent;
     let rawhtml = articleContent.outerHTML;
     let length = articleContent.textContent.length;
-    let medium = (window.location.hostname.indexOf('medium.com') != -1) ? true : false;
 
-    if (length < 250 || medium > 30 ) {
+    if (length < 250) {
       page.innerHTML = pageCacheHtml;
 
       if (readability.flagIsActive(readability.FLAG_STRIP_UNLIKELYS)) {
