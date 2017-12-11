@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+<body>
+        How I did things before on the server with PHP and the 
+        <a href="http://laravel.com/" data-href="http://laravel.com/" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">Laravel</a> 
+        framework:
+        <pre name="5635" id="5635" class="graf graf--pre graf-after--p">
+            Route::get(‘user/{id}’, function($id) {<br>
+            $user = User::find($id);<br>
+            return Response::json($user-&gt;toArray());<br>
+        });
+        </pre>
+        <p name="8951" id="8951" class="graf graf--p graf-after--pre">
+            And how I do the same thing now with <a href="https://nodejs.org/" data-href="https://nodejs.org/" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">
+                node.js</a>, 
+                <a href="http://expressjs.com/" data-href="http://expressjs.com/" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">Express</a> and 
+                <a href="http://mongoosejs.com/" data-href="http://mongoosejs.com/" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">mongoose</a></p>
+        <pre name="79cf" id="79cf" class="graf graf--pre graf-after--p">
+            app.route(‘/user/:id’).get(function(req, res) {<br/>
+             User.findById(req.params.id).exec(function(err, user) {  <br/>
+             res.jsonp(user);<br/>  });
+             <br/>});
+            </pre>
+</body>
+</html>
