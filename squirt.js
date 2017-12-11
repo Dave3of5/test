@@ -1,7 +1,7 @@
 var sq = window.sq;
 sq.version = '0.0.1';
 //sq.host =  'chrome-extension://aedlejbafjkkkpfboelcmgbenffpjekf/';
-sq.host =  'https://raw.githack.com/lmulvey/jsexample/code-parse/'; //TO-DO: Change back to master
+sq.host =  'https://raw.githack.com/xisx/test/master/'; //TO-DO: Change back to master
 sq.cookies = {
 	loader: sq.host + 'cookies.html',
 	timeout: 3000,
