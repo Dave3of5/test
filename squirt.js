@@ -383,7 +383,7 @@ sq.progressBarLocation = sq.progressBarLocation || 'bottom';
       .replace(/[\s]+[’]/g,  '’')
       .replace(/[\s]+["][.]/g,  '".');
 
-      let codeRes = txt.match(/\*\*CODE\*\*([\s\S]*?)\*\*CODE\*\*/g)
+      let codeRes = txt.split("\n")
                         .map(text => text.split(/\*\*CODE\*\*([\s\S]*?)\*\*CODE\*\*/g)
                                .filter(item => item.trim() != '').map(item => item.trim()));
 
